@@ -1,0 +1,83 @@
+/*
+Esplora.MusicalInstrument()
+*/
+
+#include <Esplora.h>
+
+void setup() {
+// nothing here
+}
+
+void loop() {
+  
+int JoystickButton = Esplora.readJoystickButton();
+  
+if (Esplora.readButton(SWITCH_DOWN) == LOW){
+  // D note
+  Esplora.tone(294,100);
+  Esplora.writeRGB(255,0,255);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(SWITCH_UP) == LOW) {
+  // E note
+  Esplora.tone(330,100);
+  Esplora.writeRGB(255,0,255);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(SWITCH_LEFT) == LOW){
+  // G note
+  Esplora.tone(392,100);
+  Esplora.writeRGB(0,255,255);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(SWITCH_RIGHT) == LOW){
+  // F# note
+  Esplora.tone(370,100);
+  Esplora.writeRGB(0,255,255);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(JOYSTICK_DOWN) == LOW){
+  // A note
+  Esplora.tone(440,100);
+  Esplora.writeRGB(255,0,0);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(JOYSTICK_UP) == LOW){
+  // C note
+  Esplora.tone(262,100);
+  Esplora.writeRGB(255,0,0);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(JOYSTICK_LEFT) == LOW){
+  // D^ note
+  Esplora.tone(587,100);
+  Esplora.writeRGB(0,255,0);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (Esplora.readButton(JOYSTICK_RIGHT) == LOW){
+  // B note 
+Esplora.tone(494,100);
+  Esplora.writeRGB(0,255,0);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+if (JoystickButton == 0){
+Esplora.tone(125,100);
+  Esplora.writeRGB(78,127,234);
+  delay(100);
+  Esplora.writeRGB(0,0,0);
+  }
+}
+
+// play happy birthday 
+//switch-down, switch-down, switch-up, switch-down, switch-left, switch-right
+//switch-down, switch-down, switch-up, switch-down, joy-down, switch-left
+//switch-down, switch-down, joy-left, joy-right, switch-left, switch-right,switch-up
+//joy-up, joy-up, joy-right, joy-left, joy-down, switch-left 
